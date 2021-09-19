@@ -5,7 +5,7 @@ const checkCarId = async (req, res, next) => {
   try {
     const car = await Car.getById(req.params.id);
     if (!car) {
-      next({ status: 404, message: "car with id <car id> is not found"});
+      next({ status: 404, message: `car with ${car_id} is not found`});
     } else {
       req.car = car;
       next();

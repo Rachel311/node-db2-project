@@ -1,5 +1,4 @@
-const router = express.Router();
-const express = require('express');
+const router = require('express').Router();
 const db = require('../../data/db-config');
 const mw = require('./cars-middleware');
 const Car = require('./cars-model')

@@ -9,8 +9,8 @@ const getById = (id) => {
 };
 
 const create = (car) => {
-  const [id] = await dbConfig('cars').insert({ car })
-  const newCar = await getById(id)
+  const [id] = dbConfig('cars').insert({ car })
+  const newCar = getById(id)
   return newCar
 };
 
